@@ -3,8 +3,8 @@ import Logo from "@/app/_components/Logo";
 
 function Header() {
   return (
-    <header className="border-b border-primary-900 px-8 py-5">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
+    <header className="border-b border-primary-900 px-3 py-5 sm:px-5 md:px-10 lg:px-14">
+      <div className="flex relative z-10 justify-between items-center sm:max-w-7xl mx-auto">
         <Logo />
         <Navigation />
       </div>

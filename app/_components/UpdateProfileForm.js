@@ -4,12 +4,12 @@ import { updateGuest } from "../_lib/actions";
 import SubmitButton from "./SubmitButton";
 
 function UpdateProfileForm({ children, guest }) {
-  const { fullName, email, nationality, nationalID, countryFlag } = guest;
+  const { fullName, email, nationalID, countryFlag } = guest;
 
   return (
     <form
       action={updateGuest}
-      className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+      className="bg-primary-900 py-8 px-8 sm:text-lg flex gap-4 flex-col"
     >
       <div className="space-y-2">
         <label>Full name</label>

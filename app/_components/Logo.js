@@ -4,16 +4,17 @@ import logo from "@/public/logo.png";
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-4 z-10">
-      {/* <Image src="/logo.png" height="60" width="60" alt="The Wild Oasis logo" /> */}
-      <Image
-        src={logo}
-        quality={100}
-        height="60"
-        width="60"
-        alt="The Wild Oasis logo"
-      />
-      <span className="text-xl font-semibold text-primary-100">
+    <Link href="/" className="flex gap-2 items-center">
+      <div className="relative h-10 aspect-square">
+        <Image
+          src={logo}
+          fill
+          quality={100}
+          className=" object-cover"
+          alt="The Wild Oasis logo"
+        />
+      </div>
+      <span className="font-semibold text-primary-100 md:text-lg lg:text-xl">
         The Wild Oasis
       </span>
     </Link>

@@ -8,14 +8,14 @@ export default async function Page({ params }) {
   const { maxCapacity } = await getCabin(cabinId);
 
   return (
-    <div>
+    <div className="mt-[20%] px-3 sm:mt-[10%] sm:px-0 md:pl-5">
       <h2 className="font-semibold text-2xl text-accent-400 mb-7">
         Edit Reservation #{bookingId}
       </h2>
 
       <form
         action={updateBooking}
-        className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+        className="bg-primary-900 py-8 px-12 sm:text-lg flex gap-6 flex-col"
       >
         <input type="hidden" value={bookingId} name="bookingId" />
         <div className="space-y-2">

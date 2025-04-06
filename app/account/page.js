@@ -4,15 +4,15 @@ export const metadata = {
   title: "Guest area",
 };
 
-async function page() {
+async function Page() {
   const session = await auth();
-  const firstName = session.user.name.split(" ").at(0);
+  const firstName = session?.user?.name?.split(" ")[0] || "Guest";
 
   return (
-    <h2 className="font-semibold text-2xl text-accent-400 mb-7">
-      Welcome, {firstName}
+    <h2 className="text-2xl font-semibold text-center mt-10 text-accent-400 md:mt-0 md:text-left lg:text-3xl">
+      Welcome, {firstName}☺️😍
     </h2>
   );
 }
 
-export default page;
+export default Page;

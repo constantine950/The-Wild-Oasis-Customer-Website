@@ -12,9 +12,9 @@ export default async function Page() {
   const cabins = await getCabins();
 
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="md:grid grid-cols-5 md:gap-x-24 md:gap-y-32 md:text-lg md:items-center">
       <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl mb-5 md:mb-10 text-accent-400 font-medium">
           Welcome to The Wild Oasis
         </h1>
 
@@ -40,7 +40,7 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-2 mt-2">
         <Image
           src={image1}
           placeholder="blur"
@@ -49,7 +49,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-2 relative aspect-square">
+      <div className="col-span-2 sm:h-96 sm:w-full relative aspect-square mt-2">
         <Image
           src="/about-2.jpg"
           fill
@@ -58,12 +58,12 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+      <div className="col-span-3 mt-4">
+        <h1 className="text-3xl mb-5 text-accent-400 font-medium">
           Managed by our family since 1962
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-8 mb-20">
           <p>
             Since 1962, The Wild Oasis has been a cherished family-run retreat.
             Started by our grandparents, this haven has been nurtured with love
@@ -79,10 +79,10 @@ export default async function Page() {
             is like coming home.
           </p>
 
-          <div>
+          <div className="flex justify-center">
             <a
               href="/cabins"
-              className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+              className="inline-block mt-4 bg-accent-500 px-8 py-3.5 text-primary-800 sm:text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Explore our luxury cabins
             </a>

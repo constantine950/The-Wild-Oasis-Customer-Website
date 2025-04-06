@@ -3,11 +3,10 @@ import TextExpander from "./TextExpander";
 import Image from "next/image";
 
 function Cabin({ cabin }) {
-  const { id, name, maxCapacity, regularPrice, discount, image, description } =
-    cabin;
+  const { name, maxCapacity, image, description } = cabin;
   return (
-    <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
-      <div className="relative scale-[1.15] -translate-x-3">
+    <div className="md:grid md:grid-cols-[3fr_4fr] gap-20 md:border border-primary-800 md:py-3 md:px-10 mb-24">
+      <div className="h-96 w-full aspect-square relative md:scale-[1.15] md:-translate-x-3">
         <Image
           src={image}
           fill
@@ -17,11 +16,11 @@ function Cabin({ cabin }) {
       </div>
 
       <div>
-        <h3 className="text-accent-100 font-black text-7xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
+        <h3 className="text-3xl mt-4 text-center md:text-left text-accent-100 font-black md:text-7xl md:mb-5 md:translate-x-[-254px] bg-primary-950 md:p-6 pb-1 md:w-[150%]">
           Cabin {name}
         </h3>
 
-        <p className="text-lg text-primary-300 mb-10">
+        <p className="md:text-lg text-primary-300 mb-10">
           <TextExpander>{description}</TextExpander>
         </p>
 
